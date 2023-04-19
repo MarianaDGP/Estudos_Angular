@@ -1,0 +1,41 @@
+<hr>
+<h2>Interpolation</h2>
+<p>{{ nome }} tem {{ idade }} anos</p>
+<p>{{ nome }} tem mais de 35 anos?</p>
+<p>{{ idade > 35 }}</p>
+<p>Quanto é {{ idade }} + {{ maisUm }}?</p>
+<p>{{ idade + maisUm }}</p>
+<hr>
+<h2>Property Binding</h2>
+<button disabled = "true">Button</button>
+<br>
+<br>
+<button [disabled] = "checkedDisabled">Button</button> <! – assim pega o valor atribuido, aqui utiliza property bind >
+<br>
+<br>
+<button disabled = "checkedDisabled">Button</button> <! – assim não pega o valor atribuido
+<br>
+<br>
+<img [src] = "ImgSrc" [title]="imgTitle" [alt]="imgTitle" >
+<hr>
+<h2>Event Binding</h2>
+<button (click)="alertaInfo('está ok')">Evento</button>
+<br>
+<br>
+<button (click)="alertaInfo2($event)">Evento 2</button>
+<br>
+<br>
+<div (mousemove) = "mouseMoveTeste($event)" style="background: greenyellow; width: 300px; height: 300px"></div>
+{{ position.x }} - {{ position.y }}
+<br>
+<br>
+<hr>
+<h2>Two-way binding</h2>
+<h4>Two-way data binding, é o termo dado a reatividade dos elementos na sua interface. Ou seja, o que acontece no DOM (View), reflete no JavaScript(Model), e o que acontece no JavaScript(Model), reflete no DOM(View)</h4>
+<input [(ngModel)]="nome">
+<br>
+<br>
+<hr>
+
+
+
